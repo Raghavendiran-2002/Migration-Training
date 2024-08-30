@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS mac_monitor;
+
+USE mac_monitor;
+
+CREATE TABLE IF NOT EXISTS monitor_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    timestamp DATETIME NOT NULL,
+    data TEXT NOT NULL
+);
