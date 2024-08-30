@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://github.com/Raghavendiran-2002/Migration-Training.git
+	fetch = +refs/*:refs/*
+	mirror = true
+[remote "gitlab"]
+	url = https://gitlab.com/Raghavendiran-2002/Migration-Training
+	fetch = +refs/heads/*:refs/remotes/gitlab/*
