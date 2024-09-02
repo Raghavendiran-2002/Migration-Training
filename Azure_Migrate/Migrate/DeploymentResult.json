@@ -1,0 +1,540 @@
+{
+  "SchemaMigrationStartedOn": "2024-09-02T09:10:55.2680367+00:00",
+  "SchemaMigrationEndedOn": "2024-09-02T09:11:24.3216184+00:00",
+  "Name": "MigrateAzure",
+  "Status": "SchemaMigrationCompleted",
+  "Databases": [
+    {
+      "TargetDatabase": {
+        "TargetDatabase": null,
+        "SchemaObjects": [],
+        "DeploymentResults": [],
+        "Name": "sanjaidatabase",
+        "ServerVersion": "12.0.2000.8",
+        "ServerEdition": "SQL Azure",
+        "CompatibilityLevel": "CompatLevel160",
+        "ServerName": "sanjaidb"
+      },
+      "SchemaObjects": [
+        {
+          "ObjectName": "__EFMigrationsHistory",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        },
+        {
+          "ObjectName": "Tags",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        },
+        {
+          "ObjectName": "Users",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        },
+        {
+          "ObjectName": "Quizzes",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        },
+        {
+          "ObjectName": "AllowedUsers",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        },
+        {
+          "ObjectName": "Attempts",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        },
+        {
+          "ObjectName": "Questions",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        },
+        {
+          "ObjectName": "QuizTags",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        },
+        {
+          "ObjectName": "Certificates",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        },
+        {
+          "ObjectName": "Options",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        },
+        {
+          "ObjectName": "Answers",
+          "SchemaName": "dbo",
+          "ObjectType": "Table",
+          "Eligibility": {
+            "IsEligibleForMigration": true,
+            "Explanation": "OK"
+          },
+          "IsSelectedForMigration": true,
+          "Recommendations": []
+        }
+      ],
+      "DeploymentResults": [
+        {
+          "CommandText": "/******** DMA Schema Migration Deployment Script      Script Date: 02-09-2024 14:40:27 ********/\r\n\r\n/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[__EFMigrationsHistory]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[__EFMigrationsHistory](\r\n\t[MigrationId] [nvarchar](150) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[ProductVersion] [nvarchar](32) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY CLUSTERED \r\n(\r\n\t[MigrationId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "/****** Object:  Table [dbo].[Tags]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Tags]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[Tags](\r\n\t[TagName] [nvarchar](450) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n CONSTRAINT [PK_Tags] PRIMARY KEY CLUSTERED \r\n(\r\n\t[TagName] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "/****** Object:  Table [dbo].[Users]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[Users](\r\n\t[UserId] [int] IDENTITY(1,1) NOT NULL,\r\n\t[Email] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[Password] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[Name] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[CreatedAt] [datetime2](7) NOT NULL,\r\n CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED \r\n(\r\n\t[UserId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "/****** Object:  Table [dbo].[Quizzes]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Quizzes]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[Quizzes](\r\n\t[QuizId] [int] IDENTITY(1,1) NOT NULL,\r\n\t[CreatorId] [int] NOT NULL,\r\n\t[Topic] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[ImageURL] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[Description] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[Duration] [int] NOT NULL,\r\n\t[DurationPerQuestion] [bit] NOT NULL,\r\n\t[StartTime] [datetime2](7) NOT NULL,\r\n\t[EndTime] [datetime2](7) NOT NULL,\r\n\t[Type] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[Code] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,\r\n\t[CreatedAt] [datetime2](7) NOT NULL,\r\n CONSTRAINT [PK_Quizzes] PRIMARY KEY CLUSTERED \r\n(\r\n\t[QuizId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Quizzes]') AND name = N'IX_Quizzes_CreatorId')\r\nCREATE NONCLUSTERED INDEX [IX_Quizzes_CreatorId] ON [dbo].[Quizzes]\r\n(\r\n\t[CreatorId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "/****** Object:  Table [dbo].[AllowedUsers]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[AllowedUsers]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[AllowedUsers](\r\n\t[AllowedUserId] [int] IDENTITY(1,1) NOT NULL,\r\n\t[QuizId] [int] NOT NULL,\r\n\t[UserId] [int] NOT NULL,\r\n CONSTRAINT [PK_AllowedUsers] PRIMARY KEY CLUSTERED \r\n(\r\n\t[AllowedUserId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[AllowedUsers]') AND name = N'IX_AllowedUsers_QuizId')\r\nCREATE NONCLUSTERED INDEX [IX_AllowedUsers_QuizId] ON [dbo].[AllowedUsers]\r\n(\r\n\t[QuizId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[AllowedUsers]') AND name = N'IX_AllowedUsers_UserId')\r\nCREATE NONCLUSTERED INDEX [IX_AllowedUsers_UserId] ON [dbo].[AllowedUsers]\r\n(\r\n\t[UserId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "/****** Object:  Table [dbo].[Attempts]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Attempts]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[Attempts](\r\n\t[AttemptId] [int] IDENTITY(1,1) NOT NULL,\r\n\t[UserId] [int] NOT NULL,\r\n\t[QuizId] [int] NOT NULL,\r\n\t[Score] [int] NOT NULL,\r\n\t[CompletedAt] [datetime2](7) NOT NULL,\r\n CONSTRAINT [PK_Attempts] PRIMARY KEY CLUSTERED \r\n(\r\n\t[AttemptId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Attempts]') AND name = N'IX_Attempts_QuizId')\r\nCREATE NONCLUSTERED INDEX [IX_Attempts_QuizId] ON [dbo].[Attempts]\r\n(\r\n\t[QuizId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Attempts]') AND name = N'IX_Attempts_UserId')\r\nCREATE NONCLUSTERED INDEX [IX_Attempts_UserId] ON [dbo].[Attempts]\r\n(\r\n\t[UserId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "/****** Object:  Table [dbo].[Questions]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Questions]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[Questions](\r\n\t[QuestionId] [int] IDENTITY(1,1) NOT NULL,\r\n\t[QuizId] [int] NOT NULL,\r\n\t[QuestionText] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n CONSTRAINT [PK_Questions] PRIMARY KEY CLUSTERED \r\n(\r\n\t[QuestionId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Questions]') AND name = N'IX_Questions_QuizId')\r\nCREATE NONCLUSTERED INDEX [IX_Questions_QuizId] ON [dbo].[Questions]\r\n(\r\n\t[QuizId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "/****** Object:  Table [dbo].[QuizTags]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QuizTags]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[QuizTags](\r\n\t[QuizId] [int] NOT NULL,\r\n\t[Tag] [nvarchar](450) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[TagEntityTagName] [nvarchar](450) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n CONSTRAINT [PK_QuizTags] PRIMARY KEY CLUSTERED \r\n(\r\n\t[QuizId] ASC,\r\n\t[Tag] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET ANSI_PADDING ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[QuizTags]') AND name = N'IX_QuizTags_TagEntityTagName')\r\nCREATE NONCLUSTERED INDEX [IX_QuizTags_TagEntityTagName] ON [dbo].[QuizTags]\r\n(\r\n\t[TagEntityTagName] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "/****** Object:  Table [dbo].[Certificates]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Certificates]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[Certificates](\r\n\t[CertificateId] [int] IDENTITY(1,1) NOT NULL,\r\n\t[CertType] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[AttemptId] [int] NOT NULL,\r\n\t[UserId] [int] NOT NULL,\r\n\t[QuizId] [int] NOT NULL,\r\n\t[Url] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n CONSTRAINT [PK_Certificates] PRIMARY KEY CLUSTERED \r\n(\r\n\t[CertificateId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Certificates]') AND name = N'IX_Certificates_AttemptId')\r\nCREATE UNIQUE NONCLUSTERED INDEX [IX_Certificates_AttemptId] ON [dbo].[Certificates]\r\n(\r\n\t[AttemptId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Certificates]') AND name = N'IX_Certificates_QuizId')\r\nCREATE NONCLUSTERED INDEX [IX_Certificates_QuizId] ON [dbo].[Certificates]\r\n(\r\n\t[QuizId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Certificates]') AND name = N'IX_Certificates_UserId')\r\nCREATE NONCLUSTERED INDEX [IX_Certificates_UserId] ON [dbo].[Certificates]\r\n(\r\n\t[UserId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "/****** Object:  Table [dbo].[Options]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Options]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[Options](\r\n\t[OptionId] [int] IDENTITY(1,1) NOT NULL,\r\n\t[QuestionId] [int] NOT NULL,\r\n\t[OptionText] [nvarchar](max) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,\r\n\t[IsAnswer] [bit] NOT NULL,\r\n CONSTRAINT [PK_Options] PRIMARY KEY CLUSTERED \r\n(\r\n\t[OptionId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Options]') AND name = N'IX_Options_QuestionId')\r\nCREATE NONCLUSTERED INDEX [IX_Options_QuestionId] ON [dbo].[Options]\r\n(\r\n\t[QuestionId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "/****** Object:  Table [dbo].[Answers]    Script Date: 02-09-2024 14:40:27 ******/\r\nSET ANSI_NULLS ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "SET QUOTED_IDENTIFIER ON",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Answers]') AND type in (N'U'))\r\nBEGIN\r\nCREATE TABLE [dbo].[Answers](\r\n\t[AnswerId] [int] IDENTITY(1,1) NOT NULL,\r\n\t[AttemptId] [int] NOT NULL,\r\n\t[QuestionId] [int] NOT NULL,\r\n\t[OptionId] [int] NOT NULL,\r\n CONSTRAINT [PK_Answers] PRIMARY KEY CLUSTERED \r\n(\r\n\t[AnswerId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)\r\n)\r\nEND",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Answers]') AND name = N'IX_Answers_AttemptId')\r\nCREATE NONCLUSTERED INDEX [IX_Answers_AttemptId] ON [dbo].[Answers]\r\n(\r\n\t[AttemptId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Answers]') AND name = N'IX_Answers_OptionId')\r\nCREATE NONCLUSTERED INDEX [IX_Answers_OptionId] ON [dbo].[Answers]\r\n(\r\n\t[OptionId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[Answers]') AND name = N'IX_Answers_QuestionId')\r\nCREATE NONCLUSTERED INDEX [IX_Answers_QuestionId] ON [dbo].[Answers]\r\n(\r\n\t[QuestionId] ASC\r\n)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Quizzes_Users_CreatorId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Quizzes]'))\r\nALTER TABLE [dbo].[Quizzes]  WITH CHECK ADD  CONSTRAINT [FK_Quizzes_Users_CreatorId] FOREIGN KEY([CreatorId])\r\nREFERENCES [dbo].[Users] ([UserId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Quizzes_Users_CreatorId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Quizzes]'))\r\nALTER TABLE [dbo].[Quizzes] CHECK CONSTRAINT [FK_Quizzes_Users_CreatorId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_AllowedUsers_Quizzes_QuizId]') AND parent_object_id = OBJECT_ID(N'[dbo].[AllowedUsers]'))\r\nALTER TABLE [dbo].[AllowedUsers]  WITH CHECK ADD  CONSTRAINT [FK_AllowedUsers_Quizzes_QuizId] FOREIGN KEY([QuizId])\r\nREFERENCES [dbo].[Quizzes] ([QuizId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_AllowedUsers_Quizzes_QuizId]') AND parent_object_id = OBJECT_ID(N'[dbo].[AllowedUsers]'))\r\nALTER TABLE [dbo].[AllowedUsers] CHECK CONSTRAINT [FK_AllowedUsers_Quizzes_QuizId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_AllowedUsers_Users_UserId]') AND parent_object_id = OBJECT_ID(N'[dbo].[AllowedUsers]'))\r\nALTER TABLE [dbo].[AllowedUsers]  WITH CHECK ADD  CONSTRAINT [FK_AllowedUsers_Users_UserId] FOREIGN KEY([UserId])\r\nREFERENCES [dbo].[Users] ([UserId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_AllowedUsers_Users_UserId]') AND parent_object_id = OBJECT_ID(N'[dbo].[AllowedUsers]'))\r\nALTER TABLE [dbo].[AllowedUsers] CHECK CONSTRAINT [FK_AllowedUsers_Users_UserId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Attempts_Quizzes_QuizId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Attempts]'))\r\nALTER TABLE [dbo].[Attempts]  WITH CHECK ADD  CONSTRAINT [FK_Attempts_Quizzes_QuizId] FOREIGN KEY([QuizId])\r\nREFERENCES [dbo].[Quizzes] ([QuizId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Attempts_Quizzes_QuizId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Attempts]'))\r\nALTER TABLE [dbo].[Attempts] CHECK CONSTRAINT [FK_Attempts_Quizzes_QuizId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Attempts_Users_UserId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Attempts]'))\r\nALTER TABLE [dbo].[Attempts]  WITH CHECK ADD  CONSTRAINT [FK_Attempts_Users_UserId] FOREIGN KEY([UserId])\r\nREFERENCES [dbo].[Users] ([UserId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Attempts_Users_UserId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Attempts]'))\r\nALTER TABLE [dbo].[Attempts] CHECK CONSTRAINT [FK_Attempts_Users_UserId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Questions_Quizzes_QuizId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Questions]'))\r\nALTER TABLE [dbo].[Questions]  WITH CHECK ADD  CONSTRAINT [FK_Questions_Quizzes_QuizId] FOREIGN KEY([QuizId])\r\nREFERENCES [dbo].[Quizzes] ([QuizId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Questions_Quizzes_QuizId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Questions]'))\r\nALTER TABLE [dbo].[Questions] CHECK CONSTRAINT [FK_Questions_Quizzes_QuizId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_QuizTags_Quizzes_QuizId]') AND parent_object_id = OBJECT_ID(N'[dbo].[QuizTags]'))\r\nALTER TABLE [dbo].[QuizTags]  WITH CHECK ADD  CONSTRAINT [FK_QuizTags_Quizzes_QuizId] FOREIGN KEY([QuizId])\r\nREFERENCES [dbo].[Quizzes] ([QuizId])\r\nON DELETE CASCADE",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_QuizTags_Quizzes_QuizId]') AND parent_object_id = OBJECT_ID(N'[dbo].[QuizTags]'))\r\nALTER TABLE [dbo].[QuizTags] CHECK CONSTRAINT [FK_QuizTags_Quizzes_QuizId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_QuizTags_Tags_TagEntityTagName]') AND parent_object_id = OBJECT_ID(N'[dbo].[QuizTags]'))\r\nALTER TABLE [dbo].[QuizTags]  WITH CHECK ADD  CONSTRAINT [FK_QuizTags_Tags_TagEntityTagName] FOREIGN KEY([TagEntityTagName])\r\nREFERENCES [dbo].[Tags] ([TagName])\r\nON DELETE CASCADE",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_QuizTags_Tags_TagEntityTagName]') AND parent_object_id = OBJECT_ID(N'[dbo].[QuizTags]'))\r\nALTER TABLE [dbo].[QuizTags] CHECK CONSTRAINT [FK_QuizTags_Tags_TagEntityTagName]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Certificates_Attempts_AttemptId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Certificates]'))\r\nALTER TABLE [dbo].[Certificates]  WITH CHECK ADD  CONSTRAINT [FK_Certificates_Attempts_AttemptId] FOREIGN KEY([AttemptId])\r\nREFERENCES [dbo].[Attempts] ([AttemptId])\r\nON DELETE CASCADE",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Certificates_Attempts_AttemptId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Certificates]'))\r\nALTER TABLE [dbo].[Certificates] CHECK CONSTRAINT [FK_Certificates_Attempts_AttemptId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Certificates_Quizzes_QuizId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Certificates]'))\r\nALTER TABLE [dbo].[Certificates]  WITH CHECK ADD  CONSTRAINT [FK_Certificates_Quizzes_QuizId] FOREIGN KEY([QuizId])\r\nREFERENCES [dbo].[Quizzes] ([QuizId])\r\nON DELETE CASCADE",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Certificates_Quizzes_QuizId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Certificates]'))\r\nALTER TABLE [dbo].[Certificates] CHECK CONSTRAINT [FK_Certificates_Quizzes_QuizId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Certificates_Users_UserId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Certificates]'))\r\nALTER TABLE [dbo].[Certificates]  WITH CHECK ADD  CONSTRAINT [FK_Certificates_Users_UserId] FOREIGN KEY([UserId])\r\nREFERENCES [dbo].[Users] ([UserId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Certificates_Users_UserId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Certificates]'))\r\nALTER TABLE [dbo].[Certificates] CHECK CONSTRAINT [FK_Certificates_Users_UserId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Options_Questions_QuestionId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Options]'))\r\nALTER TABLE [dbo].[Options]  WITH CHECK ADD  CONSTRAINT [FK_Options_Questions_QuestionId] FOREIGN KEY([QuestionId])\r\nREFERENCES [dbo].[Questions] ([QuestionId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Options_Questions_QuestionId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Options]'))\r\nALTER TABLE [dbo].[Options] CHECK CONSTRAINT [FK_Options_Questions_QuestionId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Answers_Attempts_AttemptId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Answers]'))\r\nALTER TABLE [dbo].[Answers]  WITH CHECK ADD  CONSTRAINT [FK_Answers_Attempts_AttemptId] FOREIGN KEY([AttemptId])\r\nREFERENCES [dbo].[Attempts] ([AttemptId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Answers_Attempts_AttemptId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Answers]'))\r\nALTER TABLE [dbo].[Answers] CHECK CONSTRAINT [FK_Answers_Attempts_AttemptId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Answers_Options_OptionId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Answers]'))\r\nALTER TABLE [dbo].[Answers]  WITH CHECK ADD  CONSTRAINT [FK_Answers_Options_OptionId] FOREIGN KEY([OptionId])\r\nREFERENCES [dbo].[Options] ([OptionId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Answers_Options_OptionId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Answers]'))\r\nALTER TABLE [dbo].[Answers] CHECK CONSTRAINT [FK_Answers_Options_OptionId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Answers_Questions_QuestionId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Answers]'))\r\nALTER TABLE [dbo].[Answers]  WITH CHECK ADD  CONSTRAINT [FK_Answers_Questions_QuestionId] FOREIGN KEY([QuestionId])\r\nREFERENCES [dbo].[Questions] ([QuestionId])",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        },
+        {
+          "CommandText": "IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Answers_Questions_QuestionId]') AND parent_object_id = OBJECT_ID(N'[dbo].[Answers]'))\r\nALTER TABLE [dbo].[Answers] CHECK CONSTRAINT [FK_Answers_Questions_QuestionId]",
+          "ExecutionSucceeded": true,
+          "ResultMessage": "Command executed successfully."
+        }
+      ],
+      "Name": "dbQuiz",
+      "ServerVersion": "15.0.2116.2",
+      "ServerEdition": "Enterprise Evaluation Edition (64-bit)",
+      "CompatibilityLevel": "CompatLevel150",
+      "ServerName": "GRMCBX3"
+    }
+  ]
+}
